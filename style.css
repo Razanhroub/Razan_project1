@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Sans", sans-serif; /* Apply font to all elements */
+    color: white;
+}
+
+body {
+    background-color: rgb(19, 19, 47);
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 10vh 1fr 75vh;
+    grid-template-columns: 1fr;
+    max-width: 100%; 
+    grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+    font-size: 1.25rem; /* Set a default font size for the body */
+    line-height: 2rem;
+}
+
+.nav {
+    margin: 0 5vw;
+    grid-area: nav;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: space-between; /* Maintain space between left and right sections */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav ul, .footer, .footer .footer-bottom ul {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flex for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.nav .right li a, .footer p a, .contact-button {
+    text-decoration: none;
+    display: block; /* Make links fill the li area */
+    padding: 0.625rem 0.9375rem; /* Same padding for all buttons */
+    border-radius: 0.3125rem; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    color: white; /* Text color */
+    background-color: transparent; /* Default background */
+}
+
+/* Add hover effect */
+.nav .right li a:hover, .footer p a:hover, .contact-button:hover {
+    background-color: rgb(124, 176, 216); /* Change background color on hover */
+}
+
+.main {
+    margin: 0 5vw;
+    grid-area: main;
+}
+
+.footer {
+    padding: 0 5vw;
+    grid-area: footer;
+    background: linear-gradient(rgb(84 67 194), rgb(124 176, 216));
+    border-top-left-radius: 5rem; /* Rounded corners */
+    border-top-right-radius: 5rem; 
+    display: grid;
+    grid-template-rows: 15% 1fr 15%; /* Divide the footer into 3 equal parts */
+    grid-template-areas: 
+        "top"
+        "middle"
+        "bottom"; /* Define grid areas for the footer */
+}
+
+/* Footer parts */
+.footer-top {
+    grid-area: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-middle {
+    grid-area: middle;
+    display: flex; /* Change from grid to flex */
+    justify-content: space-between; /* Space between left and right sections */
+    flex-wrap: wrap;
+}
+
+.leftfoot {
+    flex: 1; /* Make both sections take equal space */
+}
+
+.footer-middle .leftfoot ul {
+    list-style: none;
+}
+
+.icon-box {
+    display: inline-flex; /* Align items horizontally */
+    justify-content: center; /* Center icon in the box */
+    align-items: center; /* Center icon in the box */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    background-color: white; /* Box color */
+    border-radius: 0.5rem; /* Rounded corners */
+    margin-right: 0.5rem; /* Space between icon and text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.footer-middle .leftfoot li:hover .icon-box {
+    background-color: rgb(124, 176, 216); /* Change background color on hover */
+}
+
+.footer-middle .leftfoot li box-icon {
+    color: rgb(19, 19, 47); /* Set icon color to match background */
+    font-size: 1.2rem; /* Adjust icon size as needed */
+}
+
+.rightfoot {
+    flex: 1; /* Make both sections take equal space */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Form styles */
+form {
+    background-color: rgb(19, 19, 47); /* Same as body */
+    border-radius: 0.5rem; /* Add some rounding */
+    padding: 2rem; /* Add some padding */
+    color: white; /* Text color */
+    width: 20rem; /* Adjust form width to be smaller */
+    max-width: 90%; /* Responsive max width */
+    margin: 0 auto; /* Center the form */
+}
+
+/* Input and textarea styles */
+input, textarea {
+    background-color: rgb(19, 19, 47); /* Same as body */
+    color: white; /* Text color */
+    border: 1px solid white; /* Border for inputs */
+    border-radius: 0.3rem; /* Rounded corners */
+    padding: 0.5rem; /* Padding for inputs */
+    width: 100%; /* Full width */
+    margin-bottom: 1rem; /* Space between inputs */
+}
+
+/* Add hover effect for inputs */
+input:hover, textarea:hover {
+    border-color: rgb(124, 176, 216); /* Change border color on hover */
+}
+
+/* Button styles */
+button {
+    background-color: rgb(19, 19, 47); /* Same as body */
+    color: white; /* Text color */
+    border: 1px solid white; /* Border for button */
+    border-radius: 0.3rem; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    width: 100%; /* Full width */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: rgb(124, 176, 216); /* Change background on hover */
+    border-color: rgb(124, 176, 216); /* Change border color on hover */
+}
+
+.footer-bottom {
+    grid-area: bottom;
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: center; /* Center items vertically */
+}
+
+/* Footer bottom logo */
+.footer-bottom img {
+    height: 5vh; /* Adjust logo size */
+    width: 5vh;
+}
+
+/* Footer bottom icons */
+.footer-bottom ul {
+    display: flex; /* Align icons in a row */
+    align-items: center; /* Center icons vertically */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.footer-bottom li {
+    margin-left: 1rem; /* Space between icons */
+}
+
+/* Icon box styles for footer bottom */
+.footer-bottom .icon-box {
+    display: inline-flex; /* Align items horizontally */
+    justify-content: center; /* Center icon in the box */
+    align-items: center; /* Center icon in the box */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    background-color: white; /* Box color */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.footer-bottom li:hover .icon-box {
+    background-color: rgb(124, 176, 216); /* Change background color on hover */
+}
+
+.footer-bottom .icon-box box-icon {
+    color: rgb(19, 19, 47); /* Set icon color */
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 0 3vw;
+    }
+    .nav, .main, .footer {
+        font-size: 0.9rem; /* Adjust font sizes for mobile */
+    }
+} 
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 0 4vw;
+    }
+    .nav, .main, .footer {
+        font-size: 1rem; /* Adjust font sizes for tablets */
+    }
+}
