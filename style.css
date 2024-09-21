@@ -7,6 +7,9 @@
     font-family: "Inria Sans", sans-serif;
     color: white;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: rgb(19, 19, 47);
