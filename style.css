@@ -49,51 +49,66 @@ body {
 }
 
 .main {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     margin: 0 5vw;
     grid-area: main;
     display: grid;
-    grid-template-rows: 40vh repeat(5, 1fr);
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
-
-.aboutme .contact-button , .legend .rightlegend .resume{
+.aboutme .contact-button , .legend .rightlegend .resume {
     width: auto;
     padding: 1rem 3rem;
     font-size: 1.5rem;
     display: inline-block;
-    margin-top: 1rem;
     background: linear-gradient(rgb(84, 67, 194), rgb(124, 176, 216));
     border-radius: 0.5rem;
 
 }
 
-.legend {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.main .legend .leftlegend img {
+.main .legend .leftlegend img , .skills .skillslogo img{
     border-radius: 50%;
     box-shadow: 20px 10px 50px rgba(84, 67, 194, 0.5);
     width: 30rem;
     height: 30rem;
 }
 
-.highlight {
-    background-color: aqua;
+ .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-
-.services {
-    background-color: black;
+.services ,.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-
-.experience {
-    background-color: azure;
+.skills{
+    display:grid;
+    grid-template-rows:20vh 1fr ;
 }
-
+.skills .skillslogo img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.skillsheader{
+    display: flex;
+    justify-content: center;
+}
+.skillslogo{
+    display: flex   ;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .testimonial {
-    background-color: brown;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer {
@@ -213,10 +228,6 @@ button:hover {
     align-items: center;
     list-style: none;
     padding: 0;
-}
-
-.footer-bottom li {
-    margin-left: 1rem;
 }
 
 .footer-bottom .icon-box {
