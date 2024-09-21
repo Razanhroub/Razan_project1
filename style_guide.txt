@@ -1,0 +1,53 @@
+Style Guide
+
+ 1. Color Palette:
+   - Primary Colors: Dark Blue (rgb(19, 19, 47)), White (rgba(233, 238, 243, 0.507)), Gradient
+ (rgb(84, 67, 194) to rgb(124, 176, 216)).
+
+- Hover Effects: Light Blue (rgb(124, 176, 216)).
+
+ 2. Typography:
+   - Font Family: 'Inria Sans', sans-serif.
+   - Font Sizes: 
+     - Default: 1.25rem (body text).
+     - Headings: 3rem (about me section), 4rem (Front-End Developer).
+   - Line Height: 2rem.
+
+ 3. Layout and Grid:
+   - Grid-based layout with areas for navigation, main content, and footer.
+   - Grid Template:
+     - Rows: 10vh (nav), 1fr (main), 75vh (footer).
+     - Columns: 1fr.
+
+   - Padding and Margins:
+     - Body Padding: 5vw for main layout.
+     - Footer Padding: 0 5vw.
+
+ 4. Buttons and Links:
+   - Buttons (e.g., contact, resume): 
+     - Background: Gradient (rgb(84, 67, 194) to rgb(124, 176, 216)).
+     - Font Size: 1.5rem.
+     - Border Radius: 0.5rem.
+   - Links: 
+     - Text-decoration: none.
+     - Hover Effect: Background changes to rgb(124, 176, 216).
+     - Button Hover: Same hover effect as links.
+
+ 5. Image Styling:
+   - Border-radius: 50% for profile pictures and skill logos.
+   - Box-shadow: 20px 10px 50px rgba(84, 67, 194, 0.5) for images.
+   - Image Sizes: 
+     - Profile Picture: 30rem x 30rem.
+     - Skills Logos: 10rem x 10rem (larger screens), 5rem x 5rem (small screens).
+
+ 6. Responsive Design:
+   - Breakpoints:
+     - 768px: Adjusted font sizes, reduced image sizes, and padding.
+     - 480px: Further adjustments to font sizes and button padding for smaller screens.
+     
+ 7. Footer Design:
+   - Background: Gradient (rgb(84, 67, 194) to rgb(124, 176, 216)).
+   - Grid Layout with 3 Areas: Top, Middle, and Bottom.
+   - Contact Icons: 
+     - Icon-box: 30px x 30px, white background, border-radius: 0.5rem.
+     - Icon-box Hover: Background changes to rgb(124, 176, 216)
