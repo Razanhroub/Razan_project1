@@ -272,6 +272,12 @@ button:hover {
     .nav {
         flex-direction: column;
     }
+    h1, h2{
+        font-size: 1.8rem !important;
+    }
+    p {
+        font-size: 1rem !important;
+    }
     .legend {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -290,7 +296,7 @@ button:hover {
     .aboutme h1 {
         font-size: 2rem !important;
     }
-    button, .contact-button, .resume {
+    button, .resume {
         padding: 0.8rem 2rem !important;
         font-size: 1.1rem !important;
     }
@@ -315,10 +321,16 @@ button:hover {
         width: 4rem !important;
         height: 4rem !important;
     }
+     h1, h2 {
+        font-size: 1.5rem !important;
+    }
+    p {
+        font-size: 0.9rem !important;
+    }
     .aboutme h1 {
         font-size: 1.5rem !important;
     }
-    button, .contact-button, .resume {
+    button, .resume {
         padding: 0.7rem 1.8rem !important;
         font-size: 1rem !important;
     }
