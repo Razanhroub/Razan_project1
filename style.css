@@ -4,76 +4,109 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inria Sans", sans-serif; /* Apply font to all elements */
+    font-family: "Inria Sans", sans-serif;
     color: white;
 }
 
 body {
     background-color: rgb(19, 19, 47);
-    margin: 0 auto;
     display: grid;
     grid-template-rows: 10vh 1fr 75vh;
     grid-template-columns: 1fr;
-    max-width: 100%; 
-    grid-template-areas:
-        "nav"
-        "main"
-        "footer";
-    font-size: 1.25rem; /* Set a default font size for the body */
+    max-width: 100%;
+    grid-template-areas: "nav" "main" "footer";
+    font-size: 1.25rem;
     line-height: 2rem;
 }
 
 .nav {
     margin: 0 5vw;
     grid-area: nav;
-    padding-top: 2vh;
     display: flex;
-    justify-content: space-between; /* Maintain space between left and right sections */
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .nav ul, .footer, .footer .footer-bottom ul {
-    list-style: none; /* Remove default list styles */
-    display: flex; /* Use flex for horizontal layout */
-    flex-wrap: wrap; /* Allow items to wrap */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .nav .right li a, .footer p a, .contact-button {
     text-decoration: none;
-    display: block; /* Make links fill the li area */
-    padding: 0.625rem 0.9375rem; /* Same padding for all buttons */
-    border-radius: 0.3125rem; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
-    color: white; /* Text color */
-    background-color: transparent; /* Default background */
+    display: block;
+    padding: 0.625rem 0.9375rem;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease;
+    color: white;
+    background-color: transparent;
 }
 
-/* Add hover effect */
 .nav .right li a:hover, .footer p a:hover, .contact-button:hover {
-    background-color: rgb(124, 176, 216); /* Change background color on hover */
+    background-color: rgb(124, 176, 216);
 }
 
 .main {
     margin: 0 5vw;
     grid-area: main;
+    display: grid;
+    grid-template-rows: 40vh repeat(5, 1fr);
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+.aboutme .contact-button , .legend .rightlegend .resume{
+    width: auto;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-top: 1rem;
+    background: linear-gradient(rgb(84, 67, 194), rgb(124, 176, 216));
+    border-radius: 0.5rem;
+
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main .legend .leftlegend img {
+    border-radius: 50%;
+    box-shadow: 20px 10px 50px rgba(84, 67, 194, 0.5);
+    width: 30rem;
+    height: 30rem;
+}
+
+.highlight {
+    background-color: aqua;
+}
+
+.services {
+    background-color: black;
+}
+
+.experience {
+    background-color: azure;
+}
+
+.testimonial {
+    background-color: brown;
 }
 
 .footer {
     padding: 0 5vw;
     grid-area: footer;
     background: linear-gradient(rgb(84 67 194), rgb(124 176, 216));
-    border-top-left-radius: 5rem; /* Rounded corners */
-    border-top-right-radius: 5rem; 
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
     display: grid;
-    grid-template-rows: 15% 1fr 15%; /* Divide the footer into 3 equal parts */
-    grid-template-areas: 
-        "top"
-        "middle"
-        "bottom"; /* Define grid areas for the footer */
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-areas: "top" "middle" "bottom";
 }
 
-/* Footer parts */
 .footer-top {
     grid-area: top;
     display: flex;
@@ -83,13 +116,13 @@ body {
 
 .footer-middle {
     grid-area: middle;
-    display: flex; /* Change from grid to flex */
-    justify-content: space-between; /* Space between left and right sections */
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .leftfoot {
-    flex: 1; /* Make both sections take equal space */
+    flex: 1;
 }
 
 .footer-middle .leftfoot ul {
@@ -97,140 +130,129 @@ body {
 }
 
 .icon-box {
-    display: inline-flex; /* Align items horizontally */
-    justify-content: center; /* Center icon in the box */
-    align-items: center; /* Center icon in the box */
-    width: 30px; /* Set a fixed width */
-    height: 30px; /* Set a fixed height */
-    background-color: white; /* Box color */
-    border-radius: 0.5rem; /* Rounded corners */
-    margin-right: 0.5rem; /* Space between icon and text */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .footer-middle .leftfoot li:hover .icon-box {
-    background-color: rgb(124, 176, 216); /* Change background color on hover */
+    background-color: rgb(124, 176, 216);
 }
 
 .footer-middle .leftfoot li box-icon {
-    color: rgb(19, 19, 47); /* Set icon color to match background */
-    font-size: 1.2rem; /* Adjust icon size as needed */
+    color: rgb(19, 19, 47);
+    font-size: 1.2rem;
 }
 
 .rightfoot {
-    flex: 1; /* Make both sections take equal space */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
-/* Form styles */
 form {
-    background-color: rgb(19, 19, 47); /* Same as body */
-    border-radius: 0.5rem; /* Add some rounding */
-    padding: 2rem; /* Add some padding */
-    color: white; /* Text color */
-    width: 20rem; /* Adjust form width to be smaller */
-    max-width: 90%; /* Responsive max width */
-    margin: 0 auto; /* Center the form */
+    background-color: rgb(19, 19, 47);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 20rem;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-/* Input and textarea styles */
 input, textarea {
-    background-color: rgb(19, 19, 47); /* Same as body */
-    color: white; /* Text color */
-    border: 1px solid white; /* Border for inputs */
-    border-radius: 0.3rem; /* Rounded corners */
-    padding: 0.5rem; /* Padding for inputs */
-    width: 100%; /* Full width */
-    margin-bottom: 1rem; /* Space between inputs */
+    background-color: rgb(19, 19, 47);
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-/* Add hover effect for inputs */
 input:hover, textarea:hover {
-    border-color: rgb(124, 176, 216); /* Change border color on hover */
+    border-color: rgb(124, 176, 216);
 }
 
-/* Button styles */
 button {
-    background-color: rgb(19, 19, 47); /* Same as body */
-    color: white; /* Text color */
-    border: 1px solid white; /* Border for button */
-    border-radius: 0.3rem; /* Rounded corners */
-    padding: 0.5rem 1rem; /* Padding for button */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
-    width: 100%; /* Full width */
+    background-color: rgb(19, 19, 47);
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
 }
 
-/* Button hover effect */
 button:hover {
-    background-color: rgb(124, 176, 216); /* Change background on hover */
-    border-color: rgb(124, 176, 216); /* Change border color on hover */
+    background-color: rgb(124, 176, 216);
+    border-color: rgb(124, 176, 216);
 }
 
 .footer-bottom {
     grid-area: bottom;
     display: flex;
-    justify-content: space-between; /* Distribute space evenly between items */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Footer bottom logo */
 .footer-bottom img {
-    height: 5vh; /* Adjust logo size */
+    height: 5vh;
     width: 5vh;
 }
 
-/* Footer bottom icons */
 .footer-bottom ul {
-    display: flex; /* Align icons in a row */
-    align-items: center; /* Center icons vertically */
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove padding */
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-bottom li {
-    margin-left: 1rem; /* Space between icons */
+    margin-left: 1rem;
 }
 
-/* Icon box styles for footer bottom */
 .footer-bottom .icon-box {
-    display: inline-flex; /* Align items horizontally */
-    justify-content: center; /* Center icon in the box */
-    align-items: center; /* Center icon in the box */
-    width: 30px; /* Set a fixed width */
-    height: 30px; /* Set a fixed height */
-    background-color: white; /* Box color */
-    border-radius: 0.5rem; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .footer-bottom li:hover .icon-box {
-    background-color: rgb(124, 176, 216); /* Change background color on hover */
+    background-color: rgb(124, 176, 216);
 }
 
 .footer-bottom .icon-box box-icon {
-    color: rgb(19, 19, 47); /* Set icon color */
-    font-size: 1.2rem; /* Adjust icon size */
+    color: rgb(19, 19, 47);
+    font-size: 1.2rem;
 }
 
-/* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
     body {
         padding: 0 3vw;
     }
     .nav, .main, .footer {
-        font-size: 0.9rem; /* Adjust font sizes for mobile */
+        font-size: 0.9rem;
     }
-} 
+}
 
-/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     body {
         padding: 0 4vw;
     }
     .nav, .main, .footer {
-        font-size: 1rem; /* Adjust font sizes for tablets */
+        font-size: 1rem;
     }
 }
