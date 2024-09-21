@@ -264,7 +264,7 @@ button:hover {
 
 @media (max-width: 768px) {
     body {
-        padding: 0 4vw;
+        padding: 0 5vw;
     }
     .nav, .main, .footer {
         font-size: 1rem;
@@ -304,7 +304,7 @@ button:hover {
 
 @media (max-width: 480px) {
     body {
-        padding: 0 3vw;
+        padding: 0 4vw;
     }
     .nav, .main, .footer {
         font-size: 0.9rem;
